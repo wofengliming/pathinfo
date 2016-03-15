@@ -1,4 +1,5 @@
 <?php
+namespace MingPHP\Model;
 /**
 *自动加载class.php方法
 *
@@ -32,7 +33,7 @@ class mysqlmodel
 
 		// exit();
 		$str=include_once(FilePATH.'MingPHP/Conf/config.php');
-		var_dump($str);
+		// var_dump($str);
 	}
 	public function index()
 	{
