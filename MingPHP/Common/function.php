@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
 *获取项目根目录地址
 *
@@ -10,10 +10,9 @@ function Mingpath(){
 }
 function FilePATH(){
     define('FilePATH',str_replace('\\','/',realpath(dirname(__FILE__).'/../../'))."/");
-    if(defined('FilePATH')){
-        return true;
-    }else{
-        return false;
-    }
+    // if(defined('FilePATH')){
+    // return true;
+    // }else{
+    // return false;
+    // }
 }
-

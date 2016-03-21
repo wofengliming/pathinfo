@@ -37,7 +37,6 @@ class mysqlmodel
 	}
 	public function index()
 	{
-		echo "2";
+		// echo "2";
 	}
 }
-?>

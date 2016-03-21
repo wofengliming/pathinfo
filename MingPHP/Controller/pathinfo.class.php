@@ -2,7 +2,6 @@
 namespace MingPHP\controller;
 /**
 *Pathinfo类根据访问所带参数进入指定方法下
-*
 */
 class pathinfo
 {
@@ -35,4 +34,3 @@ class pathinfo
 //		return $paths;
 	}
 }
-?>

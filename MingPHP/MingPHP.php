@@ -17,4 +17,3 @@ new MingPHP\Model\mysqlmodel;
 //pathinfo 模式获取访问路径
 //$paths=Home\controller\index::index();
 $path=MingPHP\controller\pathinfo::infoming();
-?>

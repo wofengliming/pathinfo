@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
 *自动加载class.php方法
 *
@@ -17,4 +17,3 @@ class autoload{
 }
 // spl_autoload_register(['autoload','load']);
 spl_autoload_register(array('autoload', 'load'));
-?>

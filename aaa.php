@@ -1,43 +1,12 @@
-<?php
-namespace Home\controller;
-use MingPHP\Model\Imredis;
-class index{
+﻿<?php
+class indexa{
 	public static function index(){
 		$API="http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=15939122392";
 		$arr=file_get_contents($API);
-		// var_dump($arr);
 		$str=iconv("gb2312", "utf-8//IGNORE",$arr);
-		// API返回的JSON数据
-		// var_dump($str);
 		$strs=self::formadata($str);
-		// JSON转换数组
-		// var_dump($strs);
-		// $res=json_encode($strs);
-		// var_dump($strs);
-		$strs['aa']=array('id'=>1,'33'=>'efe','aef2'=>array('aew'=>'qew','a2'=>'ae',),);
-		$arr=self::xmlapp(200,'成功',$strs);
-		echo $arr;
-		// 调用redis
-		// Imredis::getredis()->set('name','helwos');
-		// $name=Imredis::getredis()->get('name');
-		// var_dump($name);
-
-	}
-	/*将数据按照指定格式返回
-	*integer code 状态码
-	*string  提示信息 message
-	*integer 数据 $data
-	*/
-	public static function jsonapp($code,$message='',$data=array()){
-		if(!is_numeric($code)){
-			return '';
-		}
-		$result=array(
-				'code'=>$code,
-				'message'=>$message,
-				'data'=>$data
-			);
-		return json_encode($result);
+		$strs['saf']=array('gdrwg'=>'asef','sdg'=>'g433');
+		$aaa=self::xmlapp(200,'1112',$strs);
 	}
 	public function xmlapp($code,$message='',$data){
 		if(!is_numeric($code)) {
@@ -55,7 +24,7 @@ class index{
 		$xml .= "<root>";
 		$xml .= self::xmlapp2($result);
 		$xml .= "</root>";
-		return $xml;
+		echo $xml;
 	}
 	/*
 	*将数组按照XML格式返回
@@ -74,7 +43,7 @@ class index{
 			$xml .= "</{$key}>\n";
 		}
 		return $xml;
-	} 
+	}
 	public static function formadata($data =null){
 	    $res =false;
 	    if($data){
@@ -87,3 +56,4 @@ class index{
 		return $ress;
 	}
 }
+indexa::index();
